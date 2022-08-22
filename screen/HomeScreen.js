@@ -12,7 +12,7 @@ function HomeScreen() {
     },[])
     return(
         <SafeAreaView>
-            <Text className="text-red-500">This is HomeScreen</Text>            
+            <Text className="text-red-500">This is HomeScreen Header</Text>            
         </SafeAreaView>
     )
 }
