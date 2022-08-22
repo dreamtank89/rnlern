@@ -12,16 +12,9 @@ function HomeScreen() {
     },[])
     return(
         <SafeAreaView>
-            
-            <View className="mx-4 mt-4 flex-row items-center">
-                <Image 
-                    className=" rounded-full h-11 w-11 mr-4"
-                    source={require('../assets/logo-shoppegram-2021-Logo.png')}
-                />
-                <View>
-                    <Text className="text-2xl">Overview</Text>
-                </View>
-            </View>            
+          
+                    <Text className="text-2xl">This is text</Text>
+                     
         </SafeAreaView>
     )
 }
