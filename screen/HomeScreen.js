@@ -20,6 +20,8 @@ function HomeScreen() {
                 <View>
                     <Text className="text-xl">Today's Overview</Text>
                 </View>
+
+                {/* Body */}
             </View>            
         </SafeAreaView>
     )
