@@ -8,7 +8,7 @@ import {
 const MyChart = () => {
     return(
         <>
-            <Text>Line Chart</Text>
+            
             <BarChart
                 data={{
                 labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept'],
@@ -65,17 +65,40 @@ function HomeScreen() {
 
             {/* Body */}
 
-            <View className="mt-8 flex-row justify-center ">
-                <View className="">
-                    <Text className="text-center text-base">Today's Sales</Text>
-                    <Text className="text-3xl font-bold">RM 3970.00</Text>
+            <View className="column">
+                <View className="mt-8 flex-row justify-center ">
+                    <View className="">
+                        <Text className="py-1 text-center text-base">Today's Sales</Text>
+                        <Text className="text-3xl font-bold">RM 3970.00</Text>
+                        <Text className="text-center text-base">20 Orders</Text>
+                    </View>
                 </View>
-            </View>
-            <View style={styles.container} className="mr-12">
-                <View>
-                <MyChart />
+                <View style={styles.container} className="mr-12">
+                    <View>
+                        <MyChart />
+                    </View>
                 </View>
+
+                <View className="mt-4 column bg-white shadow-md rounded-lg p-4">
+                    <View className="flex-row space-between ">
+                        <View className=" flex-row flex-auto">
+                            <Text >Ads Cost</Text>
+                            <Text className=" text-blue-600">Edit</Text>
+                        </View>
+                        <View className="flex-auto">
+                            <Text > Profit / Loss</Text>
+                        </View>
+                    </View>
+                    <View className="flex-row space-between rounded">
+                        <Text className="flex-auto text-lg">RM1733.20</Text>
+                        <Text className="flex-auto text-lg text-green-700">RM2200.90</Text>
+                    </View>
+                </View>
+                
             </View>
+            
+            
+           
             
         </SafeAreaView>
     )
@@ -85,7 +108,7 @@ export default HomeScreen
 
 const styles = StyleSheet.create({
     container: {
-      flex: 1,
+      
       justifyContent: 'center',
       alignItems: 'center',
       textAlign: 'center',
