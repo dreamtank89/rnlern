@@ -1,4 +1,4 @@
-import { Text, SafeAreaView, View, Image, Dimensions, StyleSheet } from 'react-native';
+import { Text, SafeAreaView, View, Image, Dimensions, StyleSheet, ScrollView } from 'react-native';
 import React, { useLayoutEffect } from 'react'
 import { useNavigation } from "@react-navigation/native"
 import {
@@ -19,7 +19,7 @@ const MyChart = () => {
                 ],
                 }}
                 width={Dimensions.get('window').width - 25}
-                height={250}
+                height={200}
                 withInnerLines = {false}
                 showValuesOnTopOfBars={true}
                 withHorizontalLabels={false}
@@ -69,7 +69,7 @@ function HomeScreen() {
                 <View className="mt-8 flex-row justify-center ">
                     <View className="">
                         <Text className="py-1 text-center text-base">Today's Sales</Text>
-                        <Text className="text-3xl font-bold">RM 3970.00</Text>
+                        <Text className="text-3xl font-bold">RM4,333,970.00</Text>
                         <Text className="text-center text-base">20 Orders</Text>
                     </View>
                 </View>
@@ -79,20 +79,32 @@ function HomeScreen() {
                     </View>
                 </View>
 
-                <View className="mt-4 column bg-white shadow-md rounded-lg p-4">
-                    <View className="flex-row space-between ">
-                        <View className=" flex-row flex-auto">
-                            <Text >Ads Cost</Text>
-                            <Text className=" text-blue-600">Edit</Text>
-                        </View>
-                        <View className="flex-auto">
-                            <Text > Profit / Loss</Text>
-                        </View>
+                <Text className="text-gray-500 text-lg font-semibold">Website Lists</Text>
+
+                <ScrollView horizontal={true}>
+
+                    <View className="mt-4 w-52 column mr-3 bg-white shadow-sm rounded-lg p-4">                        
+                        <Text className="text-base font-semibold">3F Bootcamp Website</Text>
+                        <Text className="mt-2 flex-auto">Ads Spend</Text>
+                        <Text className="flex-auto text-base font-bold text-red-600">RM2,200.90</Text>
+                        <Text className="mt-2 flex-auto">Gross P/L</Text>
+                        <Text className="flex-auto text-base font-bold text-green-700">RM2,200.90</Text>  
                     </View>
-                    <View className="flex-row space-between rounded">
-                        <Text className="flex-auto text-lg">RM1733.20</Text>
-                        <Text className="flex-auto text-lg text-green-700">RM2200.90</Text>
+
+                    <View className="mt-4 w-52 column mr-3 bg-white shadow-sm rounded-lg p-4">                        
+                        <Text className="text-base font-semibold">3F Bootcamp Website</Text>
+                        <Text className="mt-2 flex-auto">Ads Spend</Text>
+                        <Text className="flex-auto text-base font-bold text-red-600">RM2,200.90</Text>
+                        <Text className="mt-2 flex-auto">Gross P/L</Text>
+                        <Text className="flex-auto text-base font-bold text-green-700">RM2,200.90</Text>  
                     </View>
+
+                </ScrollView>
+
+                <Text className="text-gray-500 text-lg my-3 font-semibold">Top Products</Text>
+
+                <View>
+                    
                 </View>
                 
             </View>
